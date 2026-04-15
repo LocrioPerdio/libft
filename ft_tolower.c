@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/13 13:34:12 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/15 15:01:38 by paduarte         ###   ########.fr       */
+/*   Created: 2026/04/15 12:05:08 by paduarte          #+#    #+#             */
+/*   Updated: 2026/04/15 12:06:41 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* The  memset() function fills the first n bytes of the memory area pointed to by
-		s with the constant byte c.
-*/
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_tolower(int c)
 {
-	size_t			i;
-	unsigned char	*ptrd;
-	unsigned char	*ptrs;
-
-	i = 0;
-	ptrd = (unsigned char *)dest;
-	ptrs = (unsigned char *)src;
-	while (i < n)
-	{
-		ptrd[i] = ptrs[i];
-		i++;
-	}
-	return ((void *)ptrd);
+	if ((c >= 65 && c <= 90))
+		return (c + 32);
+	return (c);
 }

@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/13 13:34:12 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/15 15:01:38 by paduarte         ###   ########.fr       */
+/*   Created: 2026/04/15 12:09:48 by paduarte          #+#    #+#             */
+/*   Updated: 2026/04/15 15:03:03 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* The  memset() function fills the first n bytes of the memory area pointed to by
-		s with the constant byte c.
+/*
+DESCRIPTION
+		The  memcpy()  function copies n bytes from memory area src to memory area dest.  The memory areas
+		must not overlap.  Use memmove(3) if the memory areas do overlap.
+
+RETURN VALUE
+		The memcpy() function returns a pointer to dest.
+
+
 */
+
+
+
+
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t			i;
@@ -27,5 +38,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		ptrd[i] = ptrs[i];
 		i++;
 	}
-	return ((void *)ptrd);
+	return (dest);
 }
