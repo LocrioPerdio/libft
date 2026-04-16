@@ -6,13 +6,13 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:06:32 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/14 17:10:32 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/16 11:20:06 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c >= 48 && c <= 57)
-        return (1);
-    return(0);
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
 }

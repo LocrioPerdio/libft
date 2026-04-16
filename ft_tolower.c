@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 12:05:08 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/15 12:06:41 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/16 11:21:12 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

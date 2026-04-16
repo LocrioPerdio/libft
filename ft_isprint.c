@@ -6,13 +6,13 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 19:03:23 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/14 19:19:13 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/16 11:20:14 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-        return (16384);
-    return(0);
+	if (c >= 32 && c <= 126)
+		return (16384);
+	return (0);
 }

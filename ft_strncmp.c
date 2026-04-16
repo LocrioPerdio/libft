@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/13 18:07:58 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/16 11:47:57 by paduarte         ###   ########.fr       */
+/*   Created: 2026/04/16 11:28:44 by paduarte          #+#    #+#             */
+/*   Updated: 2026/04/16 11:56:06 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-  The  bzero()  function  erases  the  data  in the n bytes of the memory
-		starting at the location pointed to by s, by writing zeros (bytes  con‐
-		taining '\0') to that area.
-		*/
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*ptr;
+	int	i;
 
 	i = 0;
-	ptr = (unsigned char *)s;
-	while (i < n)
-	{
-		ptr[i] = '\0';
+	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n - 1)
 		i++;
-	}
+	return (s1[i] - s2[i]);
 }

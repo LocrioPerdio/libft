@@ -6,13 +6,13 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:12:24 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/14 17:13:42 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/16 11:45:17 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90) || (c >= 48 && c <= 57)) 
-        return (1);
-    return (0);
+	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90) || (c >= 48 && c <= 57))
+		return (1);
+	return (0);
 }

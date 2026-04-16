@@ -3,29 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 13:34:12 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/15 15:01:38 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/16 12:06:15 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* The  memset() function fills the first n bytes of the memory area pointed to by
+/* The  memset() function fills the first n bytes
+ of the memory area pointed to by
 		s with the constant byte c.
 */
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;
-	unsigned char	*ptrd;
-	unsigned char	*ptrs;
+	unsigned char	*ptr;
 
 	i = 0;
-	ptrd = (unsigned char *)dest;
-	ptrs = (unsigned char *)src;
+	ptr = (unsigned char *)s;
 	while (i < n)
 	{
-		ptrd[i] = ptrs[i];
+		ptr[i] = c;
 		i++;
 	}
-	return ((void *)ptrd);
+	return ((void *)ptr);
 }
