@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 12:40:44 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/15 15:03:03 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/16 10:43:58 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int		ft_tolower(int c);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
-//void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 //void	*ft_memmove(void *dest, const void *src, size_t n);
 //void	*ft_memchr(const void *s, int c, size_t n);
 //int		ft_memcmp(const void *s1, const void *s2, size_t n);
