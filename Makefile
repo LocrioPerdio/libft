@@ -48,6 +48,8 @@ SRC = \
 	ft_lstiter.c \
 	ft_lstmap.c
 
+	
+
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)

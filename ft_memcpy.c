@@ -6,14 +6,14 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 12:09:48 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/16 12:12:11 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/16 12:27:34 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 DESCRIPTION
 		The  memcpy()  function copies n bytes from memory area src to
-		 memory area dest.  The memory areas
+			memory area dest.  The memory areas
 		must not overlap.  Use memmove(3) if the memory areas do overlap.
 
 RETURN VALUE
@@ -31,7 +31,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	ptrd = (unsigned char *)dest;
 	ptrs = (unsigned char *)src;
-		while (i < n)
+	if (!dest && !src)
+		return (NULL);
+	while (i < n)
 	{
 		ptrd[i] = ptrs[i];
 		i++;
