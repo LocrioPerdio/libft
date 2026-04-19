@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 16:15:39 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/19 16:18:27 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/19 21:22:39 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ RETURN VALUES
        NULL is returned; otherwise a pointer to the first character of the first occur‐
        rence of little is returned.
 */
-
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+#include "libft.h"
+char	*ft_strnstr(const char *big, const char *little, size_t len);

@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 10:51:33 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/19 11:26:31 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/19 21:34:07 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = ft_strlen(s);
 	while (i >= 0)

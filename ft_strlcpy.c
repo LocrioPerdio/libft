@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 11:27:46 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/19 21:18:30 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/19 21:32:40 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	len = ft_strlen(src);
 	if (size == 0)
 		return (len);
-	while (src && i < size - 1)
+	while (src[i] && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;

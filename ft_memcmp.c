@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 10:33:18 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/19 10:48:50 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/19 21:45:56 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ RETURN VALUE
 		If n is zero, the return value is zero.
 */
 
+#include "libft.h"
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;
@@ -38,7 +40,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	aux2 = (unsigned char *)s2;
 	if (n == 0)
 		return (0);
-	while (aux1[i] && aux2[i] && (i < (n - 1)) && aux1[i] == aux2[i])
+	while (i < n)
+	{
+		if (aux1[i] != aux2[i])
+			return (aux1[i] - aux2[i]);
 		i++;
-	return (aux1[i] - aux2[i]);
+	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 13:10:01 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/17 14:13:47 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/19 21:21:11 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,14 @@ RETURN VALUE
 		these functions return a pointer to the terminator.
 
 */
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
 		if ((unsigned char)*s == (unsigned char)c)
-			return ((unsigned char *)s);
+			return ((char *)s);
 		s++;
 	}
 	if ((unsigned char)c == '\0')

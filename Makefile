@@ -47,7 +47,6 @@ SRC = \
 	ft_lstclear.c \
 	ft_lstiter.c \
 	ft_lstmap.c
-
 	
 
 OBJ = $(SRC:.c=.o)
