@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 16:15:39 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/19 21:22:39 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/20 14:09:11 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,37 @@ RETURN VALUES
        rence of little is returned.
 */
 #include "libft.h"
-char	*ft_strnstr(const char *big, const char *little, size_t len);
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+
+{
+       size_t i;
+       size_t j;
+       size_t empty;
+
+       i = 0;
+       empty = ft_strlen(little);
+       if (empty == 0)
+              return(big);
+       while(big[i])
+       {
+              if (!ft_strchr(big, little[0]))
+                     return(NULL);
+              else
+              {
+                     j = ft_strchr(big, little[0]);
+                     empty = j;
+                     while(little[i] < len)
+                     {
+                            if (big[j + 1] == little[i + 1])
+                            j++;
+                            i++;
+                     }
+                     return (empty);
+              }
+
+       }
+       
+
+}
+
