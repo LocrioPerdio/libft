@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 14:18:05 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/19 11:26:56 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/21 13:05:59 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
