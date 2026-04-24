@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/19 16:00:05 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/22 11:49:49 by paduarte         ###   ########.fr       */
+/*   Created: 2026/04/21 22:33:31 by paduarte          #+#    #+#             */
+/*   Updated: 2026/04/22 12:36:57 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	char	*sub;
+	size_t	count;
 	size_t	s_len;
-	size_t	d_len;
 
-	s_len = ft_strlen(src);
-	d_len = ft_strlen(dst);
-	i = d_len;
-	j = 0;
-	if (size == 0)
-		return (s_len);
-	if (size < d_len)
-		return (size + s_len);
-	while (src[j] && d_len + j < (size - 1))
+	count = 0;
+	s_len = ft_strlen(s);
+	if (!s)
+		return (NULL);
+	if (start >= s_len || len == 0)
+		return (ft_strdup(""));
+	if (len > (s_len - start))
+		len = (s_len - start);
+	sub = malloc(len + 1);
+	if (!sub)
+		return (NULL);
+	while (count < len)
 	{
-		dst[i] = src[j];
-		i++;
-		j++;
+		sub[count] = s[start];
+		count++;
+		start++;
 	}
-	dst[i] = '\0';
-	return (d_len + s_len);
+	sub[count] = '\0';
+	return (sub);
 }

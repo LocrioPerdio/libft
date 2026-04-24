@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 11:21:24 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/21 14:31:49 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/21 18:22:29 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	*ptr;
 
-	ptr = (void *)malloc(nmemb * size);
-	if ((nmemb * size > 2147483647) || !ptr)
+	if ((size != 0 && nmemb > SIZE_MAX / size))
 		return (NULL);
-	ft_bzero(ptr, size);
-	return (ptr);
+	ptr = malloc(nmemb * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, (size * nmemb));
+	return ((void *)ptr);
 }
