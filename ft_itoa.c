@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 12:47:49 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/24 13:23:45 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/24 14:28:30 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,18 @@
 int	ft_numlen(int n)
 {
 	int	count;
+	long	ln;
 
 	count = 0;
-	if (n < 0)
+	ln = n;
+	if (ln < 0)
 	{
 		count++;
-		if (n == INT_MIN)
-		{
-			n = n / 10;
-			count++;
-		}
-		n = n * (-1);
+		ln = ln * (-1);
 	}
-	while (n > 9)
+	while (ln > 9)
 	{
-		n = n / 10;
+		ln = ln / 10;
 		count++;
 	}
 	count++;
@@ -41,25 +38,26 @@ char	*ft_itoa(int n)
 	int		i;
 	char	*res;
 	int		len;
+	long 	ln;
 
 	len = (ft_numlen(n));
 	res = malloc(sizeof(char) * (len + 1));
 	i = len - 1;
+	ln = n;
 	if (!res)
 		return (NULL);
-	if (n < 0)
+	if (ln < 0)
 	{
-		if (n == INT_MIN)
-			return ("-2147483647");
-		n = n * (-1);
+		ln = ln * (-1);
 		res[0] = '-';
 	}
-	while (n > 9)
+	while (ln > 9)
 	{
-		res[i] = n % 10 + 48;
-		n = n / 10;
+		res[i] = ln % 10 + 48;
+		ln = ln / 10;
 		i--;
 	}
-	res[i] = n + 48;
+	res[i] = ln + 48;
+	res[len] = '\0';
 	return (res);
 }

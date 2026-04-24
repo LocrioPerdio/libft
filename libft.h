@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 12:40:44 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/21 11:51:46 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/24 15:17:28 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h> 
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -56,8 +57,8 @@ void	*ft_calloc(size_t nmemb, size_t size);
 //char	*ft_strjoin(char const *s1, char const *s2);
 //char	*ft_strtrim(char const *s1, char const *set);
 //char	**ft_split(char const *s, char c);
-//char	*ft_itoa(int n);
-//char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 //void	ft_putchar_fd(char c, int fd);
