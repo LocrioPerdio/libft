@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 12:09:48 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/17 13:15:41 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/27 13:27:35 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	if (!dest && !src)
-		return (NULL);
+	if ((!dest && !src) || n == 0)
+		return (dest);
 	while (i < n)
 	{
 		d[i] = s[i];

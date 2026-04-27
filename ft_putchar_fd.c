@@ -1,39 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/19 16:00:05 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/22 11:49:49 by paduarte         ###   ########.fr       */
+/*   Created: 2026/04/26 16:31:30 by paduarte          #+#    #+#             */
+/*   Updated: 2026/04/26 16:43:07 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-	size_t	j;
-	size_t	s_len;
-	size_t	d_len;
-
-	s_len = ft_strlen(src);
-	d_len = ft_strlen(dst);
-	i = d_len;
-	j = 0;
-	if (size == 0)
-		return (s_len);
-	if (size < d_len)
-		return (size + s_len);
-	while (src[j] && d_len + j < (size - 1))
-	{
-		dst[i] = src[j];
-		i++;
-		j++;
-	}
-	dst[i] = '\0';
-	return (d_len + s_len);
+	write(fd, &c, 1);
 }
