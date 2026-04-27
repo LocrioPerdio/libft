@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 12:40:44 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/22 17:48:16 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/26 17:58:14 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h> 
-# include <stdint.h>
+# include <stdint.h> //size_max
+/*#include <stdio.h>
+# include <string.h>
+# include <
+# include
+# include 
+*/
 
 typedef struct s_list
 {
@@ -57,14 +63,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
-//char	*ft_itoa(int n);
-//char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-//void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
-//void	ft_putchar_fd(char c, int fd);
-//void	ft_putstr_fd(char *s, int fd);
-//void	ft_putendl_fd(char *s, int fd);
-//void	ft_putnbr_fd(int n, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 /* PARTE 3 */
 //t_list	*ft_lstnew(void *content);

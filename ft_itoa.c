@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 12:47:49 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/24 14:28:30 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/26 16:44:44 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_numlen(int n)
 {
-	int	count;
+	int		count;
 	long	ln;
 
 	count = 0;
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 	int		i;
 	char	*res;
 	int		len;
-	long 	ln;
+	long	ln;
 
 	len = (ft_numlen(n));
 	res = malloc(sizeof(char) * (len + 1));
