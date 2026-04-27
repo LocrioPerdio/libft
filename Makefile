@@ -34,6 +34,7 @@ SRC = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_lstnew.c \
+	ft_lstsize.c \
 	
 
 OBJ = $(SRC:.c=.o)
