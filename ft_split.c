@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:31:49 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/27 14:31:19 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/28 14:47:28 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_countw(const char *s, int c)
 }
 
 
-
+/*
 //char *fill_word(char *s1, char *s2, size_t len)
 
 char	**ft_split(char const *s, char c)
@@ -49,4 +49,4 @@ char	**ft_split(char const *s, char c)
 	}
 	// ft_free
 	return (w_array);
-}
+}*/
