@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:31:49 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/28 14:47:28 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/29 15:17:33 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_countw(const char *s, int c)
 	size_t	words;
 	size_t	i;
 
-	words = 1;
+	words = 0;
 	i = 0;
 	while (s[i])
 	{

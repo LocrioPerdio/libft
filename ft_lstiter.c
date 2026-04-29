@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/28 15:18:47 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/29 12:47:24 by paduarte         ###   ########.fr       */
+/*   Created: 2026/04/29 13:11:20 by paduarte          #+#    #+#             */
+/*   Updated: 2026/04/29 13:23:30 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// This function lets us add a new element to the end of an existing list.
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
-
+// Iterate over the list 'lst' and apply the function 'f' to the content
+// of all elements.
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *ptr;
+	t_list	*ptr;
 
-	if (!lst)
-		return (NULL);
 	ptr = lst;
-	while (ptr->next)
+	while (ptr)
+	{
+		f(ptr->content);
 		ptr = ptr->next;
-	if (!ptr)
-		*lst = new;
-	ptr->next = new;
+	}
 }

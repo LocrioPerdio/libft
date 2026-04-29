@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/28 15:18:47 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/29 12:47:24 by paduarte         ###   ########.fr       */
+/*   Created: 2026/04/29 12:28:48 by paduarte          #+#    #+#             */
+/*   Updated: 2026/04/29 12:39:05 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// This function lets us add a new element to the end of an existing list.
+/*Free the memory of the element passed as parameter using the 'del'
+function then	free(3). The memory of 'next' must not be freed.
+*/
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
-
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list *ptr;
-
-	if (!lst)
-		return (NULL);
-	ptr = lst;
-	while (ptr->next)
-		ptr = ptr->next;
-	if (!ptr)
-		*lst = new;
-	ptr->next = new;
+	del(lst->content);
+	free(lst);
 }
