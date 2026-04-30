@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 14:58:04 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/29 13:28:59 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/04/30 15:00:04 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,15 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*ptr;
 
-    if (!lst)
+    ptr = lst;
+	if (!lst)
         return (NULL);
-	ptr = lst;
+	
 	while (ptr->next)
 		ptr = ptr->next;
 	return (ptr);
 }
-int main(void)
+/*int main(void)
 {
 	t_list	*lst = NULL;
 	t_list	*node1 = ft_lstnew("contenido 1");
@@ -48,3 +49,4 @@ int main(void)
 
 	return (0);
 }
+*/
