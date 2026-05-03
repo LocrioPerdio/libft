@@ -6,16 +6,16 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:31:49 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/03 16:36:16 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/03 16:48:16 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_newarr(char const *s, char c);
+static char		**ft_newarr(char const *s, char c);
 static size_t	ft_countw(const char *s, int c);
-static char	*fill_word(const char *s, size_t start, size_t end);
-static void	*ft_free(char **w_array, size_t count);
+static char		*fill_word(const char *s, size_t start, size_t end);
+static void		*ft_free(char **w_array, size_t count);
 
 char	**ft_split(char const *s, char c)
 {
@@ -106,5 +106,3 @@ static char	**ft_newarr(char const *s, char c)
 		return (NULL);
 	return (w_array);
 }
-
-

@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 15:18:47 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/03 16:36:50 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/03 17:17:27 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,15 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;
 
-	if (!lst)
+	if (!lst || !new)
 		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
 	ptr = *lst;
 	while (ptr->next)
 		ptr = ptr->next;
-	if (!ptr)
-		*lst = new;
 	ptr->next = new;
 }
