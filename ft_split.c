@@ -3,16 +3,50 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:31:49 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/30 17:00:41 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/03 16:36:16 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_countw(const char *s, int c)
+static char	**ft_newarr(char const *s, char c);
+static size_t	ft_countw(const char *s, int c);
+static char	*fill_word(const char *s, size_t start, size_t end);
+static void	*ft_free(char **w_array, size_t count);
+
+char	**ft_split(char const *s, char c)
+{
+	char	**w_array;
+	size_t	i;
+	size_t	j;
+	size_t	start;
+
+	w_array = ft_newarr(s, c);
+	if (!w_array)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		if (!s[i])
+			break ;
+		start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		w_array[j++] = fill_word(s, start, i);
+		if (!w_array[j - 1])
+			return (ft_free(w_array, j));
+	}
+	w_array[j] = NULL;
+	return (w_array);
+}
+
+static size_t	ft_countw(const char *s, int c)
 {
 	size_t	words;
 	size_t	i;
@@ -28,7 +62,7 @@ size_t	ft_countw(const char *s, int c)
 	return (words);
 }
 
-char	*fill_word(const char *s, size_t start, size_t end)
+static char	*fill_word(const char *s, size_t start, size_t end)
 {
 	size_t	i;
 	char	*word;
@@ -47,7 +81,7 @@ char	*fill_word(const char *s, size_t start, size_t end)
 	return (word);
 }
 
-void	*ft_free(char **w_array, size_t count)
+static void	*ft_free(char **w_array, size_t count)
 {
 	size_t	i;
 
@@ -61,32 +95,15 @@ void	*ft_free(char **w_array, size_t count)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_newarr(char const *s, char c)
 {
 	char	**w_array;
-	size_t	i;
-	size_t	j;
-	size_t	start;
 
-	i = 0;
-	j = 0;
-	if (!s )
+	if (!s)
 		return (NULL);
-	w_array = malloc(sizeof(char *) * (ft_countw(s, c) + 1));
+	w_array = malloc((ft_countw(s, c) + 1) * sizeof(char *));
 	if (!w_array)
 		return (NULL);
-	while (s[i])
-	{
-		while (s[i] && s[i] == c)
-			i++;
-		start = i;
-		while (s[i] && s[i] != c)
-			i++;
-		w_array[j++] = fill_word(s, start, i);
-		if (!w_array[j - 1])
-			return(ft_free(w_array, j));
-	}
-	w_array[j] = NULL;
 	return (w_array);
 }
 

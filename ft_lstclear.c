@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 12:55:51 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/29 13:28:59 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/03 16:37:29 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*ptr;
 
-    ptr = NULL;
+	ptr = NULL;
 	while (*lst)
 	{
 		ptr = (*lst)->next;
@@ -30,5 +30,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = ptr;
 	}
 	free(*lst);
-	*lst = NULL; // ?
+	*lst = NULL;
 }

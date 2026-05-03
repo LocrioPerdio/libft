@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 15:18:47 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/30 15:05:31 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/03 16:36:50 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 
 {
-	t_list *ptr;
+	t_list	*ptr;
 
 	if (!lst)
-		return;
+		return ;
 	ptr = *lst;
 	while (ptr->next)
 		ptr = ptr->next;
