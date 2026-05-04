@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by <paduarte>*
+*This project has been created as part of the 42 curriculum by <<paduarte>>*
 
 # Libft
 
@@ -89,10 +89,10 @@ Generates: libft.a
 
 Rules:
 
-make        → compile the library
-make clean  → remove object files
-make fclean → remove object files and library
-make re     → recompile everything
+- `make`        → compile the library
+- `make clean`  → remove object files
+- `make fclean` → remove object files and library
+- `make re`     → recompile everything
 
 ##### Usage
 
