@@ -3,18 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 18:07:58 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/16 11:47:57 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/04 11:37:00 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-  The  bzero()  function  erases  the  data  in the n bytes of the memory
-		starting at the location pointed to by s, by writing zeros (bytes  con‐
-		taining '\0') to that area.
-		*/
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
@@ -30,3 +25,13 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+/*
+int main(void)
+{
+    char s[] = "holi!";
+    printf("%s \n", s);
+    ft_bzero(s+2, 2);
+    printf("%s \n", s);
+    return (0);
+}
+*/

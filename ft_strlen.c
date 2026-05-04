@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 13:18:17 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/21 10:58:09 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/04 10:53:33 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,12 @@ size_t	ft_strlen(const char *s)
 		count++;
 	return (count);
 }
+/*
+int main(void)
+{
+	char s[] = "holi!";
+	printf("%ld \n", ft_strlen(s));
+	printf("%ld \n", strlen(s));
+	return (0);
+}
+*/

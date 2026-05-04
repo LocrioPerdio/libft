@@ -3,24 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 14:04:49 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/16 14:35:06 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/04 14:21:17 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*DESCRIPTION
-		The memmove() function copies n bytes from memory area
-		src  to  memory area dest.  The memory areas may over‐
-		lap: copying takes place as though the  bytes  in  src
-		are  first copied into a temporary array that does not
-		overlap src or dest, and the  bytes  are  then  copied
-		from the temporary array to dest.
-
-RETURN VALUE
-		The memmove() function returns a pointer to dest.
-*/
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
@@ -51,3 +40,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/*
+int main(void)
+{
+    char src[] = "holi!";
+    char dest[20];
+	char dest2[20];
+    printf("%s \n", ft_memmove(dest, src, 2));
+	printf("%s \n", memmove(dest2, src, 2));
+    return (0);
+}
+*/

@@ -3,23 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:47:08 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/16 11:18:01 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/04 11:52:04 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- checks  for an alphabetic character; in the standard "C" locale,
-				it is equivalent to (isupper(c) ||  islower(c)).   In  some  lo‐
-				cales, there may be additional characters for which isalpha() is
-				true—letters which are neither uppercase nor lowercase.
-
-	The values returned are nonzero if  the  character  c  falls  into  the
-	tested class, and zero if not.
-
-*/
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -28,3 +19,13 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
+/*
+int main(void)
+{
+	printf("%d \n", ft_isalpha('a'));
+	printf("%d \n", isalpha('a'));
+	printf("%d \n", ft_isalpha('7'));
+	printf("%d \n", isalpha('7'));
+	return (0);
+}
+*/

@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by <<paduarte>>*
+*This project has been created as part of the 42 curriculum by paduarte*
 
 # Libft
 
@@ -130,4 +130,4 @@ AI was used for:
 
 ##### ### Author
 
-<paduarte>
+paduarte

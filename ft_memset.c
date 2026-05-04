@@ -3,17 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 13:34:12 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/16 12:27:15 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/04 11:02:22 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* The  memset() function fills the first n bytes
- of the memory area pointed to by
-		s with the constant byte c.
-*/
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -30,3 +26,12 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return ((void *)ptr);
 }
+/*
+int main(void)
+{
+    char s[] = "holi!";
+    printf("%p \n", ft_memset(s, 'a', 2));
+    printf("%p \n", memset(s, 'a', 2));
+    return (0);
+}
+*/
