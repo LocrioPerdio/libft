@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 12:40:44 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/04 11:52:04 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/05 14:17:24 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,9 @@
 # include <unistd.h>
 # include <stddef.h> 
 # include <stdint.h> //size_max
-/*#include <stdio.h>
+# include <stdio.h>
 # include <string.h>
 # include <ctype.h>
-# include
-# include 
-*/
 
 typedef struct s_list
 {

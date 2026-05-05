@@ -6,22 +6,10 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 14:18:05 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/21 13:05:59 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/05 11:45:15 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-DESCRIPTION
-		The  memchr() function scans the initial n bytes of the
-		memory area pointed to by s for the first  instance  of
-		c.   Both c and the bytes of the memory area pointed to
-		by s are interpreted as unsigned char.
-RETURN VALUE
-		The  memchr()  and memrchr() functions return a pointer
-		to the matching byte or NULL if the character does  not
-		occur in the given memory area.
-
-*/
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
@@ -39,3 +27,20 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+/*
+int main(void)
+ {
+  const char s1[] = "Hola compi!";
+  printf("%p \n", ft_memchr(s1, 'm', 3));
+  printf("%p \n", memchr(s1, 'm', 3));
+  printf("%p \n", ft_memchr(s1, 'm', 8));
+  printf("%p \n", memchr(s1, 'm', 8));
+  printf("%p \n", ft_memchr(s1, 'm', 0));
+  printf("%p \n", memchr(s1, 'm', 0));
+  printf("%p \n", ft_memchr("", 'm', 3));
+  printf("%p \n", memchr("", 'm', 3));
+  printf("%p \n", ft_memchr(s1, '\0', 30));
+  printf("%p \n", memchr(s1, '\0', 30));
+  return (0);
+}
+*/

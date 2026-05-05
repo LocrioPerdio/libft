@@ -3,29 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 10:33:18 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/19 21:45:56 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/05 14:28:55 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-DESCRIPTION
-		The  memcmp()  function compares the first n bytes (each interpreted as
-		unsigned char) of the memory areas s1 and s2.
-
-RETURN VALUE
-		The memcmp() function returns  an  integer  less  than,  equal  to,  or
-		greater than zero if the first n bytes of s1 is found, respectively, to
-		be less than, to match, or be greater than the first n bytes of s2.
-
-		For  a  nonzero return value, the sign is determined by the sign of the
-		difference between the first pair of  bytes  (interpreted  as  unsigned
-		char) that differ in s1 and s2.
-
-		If n is zero, the return value is zero.
-*/
 
 #include "libft.h"
 
@@ -48,3 +31,26 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+/*
+int main(void)
+{
+  const char s1[] = "HOLA COMPI!";
+  const char s2[] = "HOLA COMPI!";
+  const char s3[] = "HOLA C0MPI!";
+  printf("%d \n", ft_memcmp(s1, s2, 3));
+  printf("%d \n \n", memcmp(s1, s2, 3));
+  printf("%d \n", ft_memcmp(s1, s2, 0));
+  printf("%d \n \n", memcmp(s1, s2, 0));
+  printf("%d \n", ft_memcmp(s1, s2, 10));
+  printf("%d \n \n", memcmp(s1, s2, 10));
+  printf("%d \n", ft_memcmp(s1, s3, 10));
+  printf("%d \n \n", memcmp(s1, s3, 10));
+  printf("%d \n", ft_memcmp(s1, s2, 30));
+  printf("%d \n \n", memcmp(s1, s2, 30));
+  printf("%d \n", ft_memcmp("", s2, 3));
+  printf("%d \n \n", memcmp("", s2, 3));
+  printf("%d \n", ft_memcmp("", "", 3));
+  printf("%d \n", memcmp("", "", 3));
+  return (0);
+}
+*/

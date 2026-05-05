@@ -6,27 +6,10 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 16:15:39 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/21 11:16:14 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/05 15:47:13 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-DESCRIPTION
-		The  strnstr()  function  locates  the  first  occurrence 
-		of the null-terminated string little in the  string  big,
-			 where  not  more  than  len  characters  are
-		searched.
-		Characters  that  appear after  a  ‘\0’ character are not searched.
-		Since the strnstr() function is a FreeBSD specific API,
-			it should only  be  used
-		when portability is not a concern.
-
-RETURN VALUES
-		If  little is an empty string,
-			big is returned; if little occurs nowhere in big,
-		NULL is returned; otherwise a pointer to the first character 
-		of the first occurrence of little is returned.
-*/
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -40,11 +23,24 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big[i] && i < len)
 	{
 		j = 0;
-		while (little[j] && (i + j) < len && big[i + j] == little[j])
-			j++;
+		while (little[j] && ((i + j) < len) && (big[i + j] == little[j]))
+			j++;   
 		if (little[j] == '\0')
 			return ((char *)&big[i]);
 		i++;
 	}
 	return (NULL);
 }
+/*
+  const char s1[] = "HOLA COMPI!";
+  const char s2[] = "COMPI!";
+  const char s3[] = "jojojo!";
+  printf("%s \n", ft_strnstr(s1, s2, 3));
+  printf("%s \n", ft_strnstr(s1, s2, 13));
+  printf("%s \n", ft_strnstr(s1, s3, 13));
+  printf("%s \n", ft_strnstr(s1, s2, 0));
+  printf("%s \n", ft_strnstr("", s2, 3));
+  printf("%s \n", ft_strnstr("", "", 3));
+  printf("%s \n", ft_strnstr(s1, "", 3));
+  return (0);
+*/

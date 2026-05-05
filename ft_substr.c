@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 22:33:31 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/22 12:36:57 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/05 14:21:13 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	while (count < len)
 	{
-		sub[count] = s[start];
+		sub[count] = s[start + count];
 		count++;
-		start++;
 	}
 	sub[count] = '\0';
 	return (sub);
 }
+/*
+int	main(void)
+{
+	char const s[] = "Hola compi, hola!";
+	printf("Antes de ft_substr: %s \n", s);
+	printf("Después de ft_substr: %s \n", ft_substr(s, 5, 30));
+	return (0);
+}*/
