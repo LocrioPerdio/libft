@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 16:15:39 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/05 15:47:13 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/05 15:54:11 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 /*
+int main(void)
+{
   const char s1[] = "HOLA COMPI!";
   const char s2[] = "COMPI!";
   const char s3[] = "jojojo!";
@@ -43,4 +45,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
   printf("%s \n", ft_strnstr("", "", 3));
   printf("%s \n", ft_strnstr(s1, "", 3));
   return (0);
+}
 */
