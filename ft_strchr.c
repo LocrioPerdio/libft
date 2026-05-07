@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 13:10:01 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/05 10:45:31 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/07 08:42:23 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ char	*ft_strchr(const char *s, int c)
 }
 /*
 
-int main() {
-  
+int main(void)
+ {
   const char s[] = "Hola compi!";
   printf("%p \n", ft_strchr(s, '\0'));
   printf("%p \n", strchr(s, '\0'));

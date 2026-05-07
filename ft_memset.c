@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 13:34:12 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/04 11:02:22 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/07 08:27:48 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memset(void *s, int c, size_t n)
 		ptr[i] = c;
 		i++;
 	}
-	return ((void *)ptr);
+	return (ptr);
 }
 /*
 int main(void)

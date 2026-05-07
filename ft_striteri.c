@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 15:23:38 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/27 10:10:32 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/07 12:35:08 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,21 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+/*
+  void to_upper(unsigned int i, char *c)
+{
+    (void)i;
+    if (*c >= 'a' && *c <= 'z')
+        *c -= 32;
+}
+
+int main(void) 
+{
+  char s[] = "hola compi!";
+   printf("Original: %s \n", s);
+   ft_striteri(s, to_upper);
+   printf("Modificada: %s \n", s);
+ 
+  return(0);
+}
+*/

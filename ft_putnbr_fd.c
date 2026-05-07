@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 16:47:41 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/26 18:01:51 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/07 10:32:19 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,10 @@ void	ft_putnbr_fd(int n, int fd)
 	if (nb < 10)
 		ft_putchar_fd(nb + 48, fd);
 }
+/*
+int main(void)
+{
+ft_putnbr_fd(42, 1);
+return(0);
+}
+*/

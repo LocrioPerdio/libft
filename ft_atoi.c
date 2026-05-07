@@ -6,17 +6,9 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:40:07 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/21 11:16:19 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/07 08:37:57 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*DESCRIPTION
-		The  atoi() function converts the initial portion of the string pointed
-		to by nptr to int.
-
-RETURN VALUE
-		The converted value or 0 on error.
-		*/
 
 int	ft_atoi(const char *nptr)
 {
@@ -42,3 +34,14 @@ int	ft_atoi(const char *nptr)
 	}
 	return (sign * res);
 }
+/*
+int main(void)
+{
+  printf("%d \n", ft_atoi("     -+-+--34242fef2qa31  "));
+  printf("%d \n \n", atoi("     -+-+--34242fef2qa31  "));
+   printf("%d \n", ft_atoi("     -34242fef2qa31  "));
+  printf("%d \n \n", atoi("     -34242fef2qa31  "));
+  return(0);
+
+}
+*/

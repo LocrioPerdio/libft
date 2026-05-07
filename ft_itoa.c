@@ -6,13 +6,13 @@
 /*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 12:47:49 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/27 10:09:43 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/07 10:20:03 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_numlen(int n)
+static int	ft_numlen(int n)
 {
 	int		count;
 	long	ln;
@@ -41,11 +41,11 @@ char	*ft_itoa(int n)
 	long	ln;
 
 	len = (ft_numlen(n));
-	res = malloc(sizeof(char) * (len + 1));
-	i = len - 1;
-	ln = n;
+	res = malloc((len + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
+	i = len - 1;
+	ln = n;
 	if (ln < 0)
 	{
 		ln = ln * (-1);
@@ -61,3 +61,13 @@ char	*ft_itoa(int n)
 	res[len] = '\0';
 	return (res);
 }
+
+/*
+int main(void)
+{   
+    char *res = ft_itoa(-4874578);
+    printf("%s", res);
+    free(res);
+    return (0);
+}
+*/
