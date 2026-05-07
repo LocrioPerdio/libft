@@ -6,24 +6,11 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 13:25:11 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/03 17:23:41 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/07 21:18:20 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-Iterate over the list 'lst' and apply the function 'f' to the content of each
- elements. Create a new list resulting of the successive applications of 'f'.
- The function 'del' is used to destroy the content of an element if necessary.
-*/
-
-/* check if lst or f or del is NULL */
-/* loop over lst */
-/* create a new element */
-/* if new elem is null, clear the new list */
-/* add the new element to the back of the list */
-/* finally, return the new list */
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -47,3 +34,27 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+/*
+int main(void) 
+{
+  t_list node1;
+  t_list node2;
+  t_list node3;
+  t_list *new_list;
+  
+  node1.content = "Rikku";
+  node1.next = &node2;
+  node2.content = "Eiko";
+  node2.next = &node3;
+  node3.content = "Vivi";
+  node3.next = NULL;
+  new_list = ft_lstmap(&node1, to_upper, del_content);
+  while (new_list)
+    {
+        printf("%s\n", (char *)new_list->content);
+        new_list = new_list->next;
+    }
+  free(new_list);
+   return(0);
+}
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 14:59:08 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/07 10:59:15 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/07 19:58:26 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	len;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (ft_strdup(""));
 	start = 0;
 	end = ft_strlen(s1);
@@ -36,3 +36,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed[len] = '\0';
 	return (trimmed);
 }
+/*
+int main(void)
+{ 
+  char s[] = "aaabbaaababababababaHolaba abCompiababababababbbbaaaba";
+  printf("%s \n", ft_strtrim(s, "ab"));
+  return 0;
+}
+*/

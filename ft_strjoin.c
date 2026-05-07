@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 11:50:59 by paduarte          #+#    #+#             */
-/*   Updated: 2026/04/22 12:48:29 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/07 20:24:09 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s3[i] = '\0';
 	return (s3);
 }
+/*
+int main(void) 
+{
+  char s1[] = "hola";
+  char s2[] = " compi!";
+  char *join;
+  
+   join = ft_strjoin(s1,s2);
+   printf("Original 1: %s \n", s1);
+   printf("Original 2: %s \n", s2);
+   printf("Unión: %s \n", join);
+   free(join);
+   return(0);
+}
+*/
