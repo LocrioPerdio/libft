@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 13:25:11 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/07 21:18:20 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/09 19:49:00 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ int main(void)
   
   node1.content = "Rikku";
   node1.next = &node2;
-  node2.content = "Eiko";
+  node2.content = "es";
   node2.next = &node3;
-  node3.content = "Vivi";
+  node3.content = "muy bonita";
   node3.next = NULL;
   new_list = ft_lstmap(&node1, to_upper, del_content);
   while (new_list)

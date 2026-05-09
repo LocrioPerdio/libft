@@ -24,7 +24,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 /*
-  void to_upper(unsigned int i, char *c)
+void to_upper(unsigned int i, char *c)
 {
     (void)i;
     if (*c >= 'a' && *c <= 'z')

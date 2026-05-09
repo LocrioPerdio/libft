@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 18:07:58 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/04 11:37:00 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/09 19:47:35 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,13 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 /*
-int main(void)
+int	main(void)
 {
-    char s[] = "holi!";
-    printf("%s \n", s);
-    ft_bzero(s+2, 2);
-    printf("%s \n", s);
-    return (0);
+	char	s[] = "holi!";
+
+	printf("%s \n", s);
+	ft_bzero(s+2, 2);
+	printf("%s \n", s);
+	return (0);
 }
 */

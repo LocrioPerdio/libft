@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paduarte <paduarte@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 11:21:24 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/07 09:54:31 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/09 19:48:00 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,27 +25,24 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (ptr);
 }
 /*
-int main(void)
+int	main(void)
 {
-    size_t *ptr;
-    size_t *tmp;
-    int i;
+	size_t	*ptr;
+	size_t	*tmp;
+	int		i;
 
-    ptr = ft_calloc(8, sizeof(size_t));
-    if (!ptr)
-        return (1);
-
-    tmp = ptr; 
-
-    i = 0;
-    while (i < 8)
-    {
-        if (tmp[i] == 0)
-            write(1, "ok\n", 3);
-        i++;
-    }
-
-    free(ptr);
-    return (0);
+	ptr = ft_calloc(8, sizeof(size_t));
+	if (!ptr)
+		return (1);
+	tmp = ptr;
+	i = 0;
+	while (i < 8)
+	{
+		if (tmp[i] == 0)
+			write(1, "ok\n", 3);
+		i++;
+	}
+	free(ptr);
+	return (0);
 }
 */

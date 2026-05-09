@@ -6,7 +6,7 @@
 /*   By: paduarte <paduarte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 14:33:44 by paduarte          #+#    #+#             */
-/*   Updated: 2026/05/07 20:38:31 by paduarte         ###   ########.fr       */
+/*   Updated: 2026/05/09 20:12:34 by paduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int main(void)
     
 	node1.content = "Rikku";
 	node1.next = &node2;
-	node2.content = "Eiko";
+	node2.content = "la más";
 	node2.next = &node3;
-	node3.content = "Vivi";
+	node3.content = "kuki";
 	node3.next = NULL;
 	printf("Total: %d \n",ft_lstsize(&node1));
 	return(0);
